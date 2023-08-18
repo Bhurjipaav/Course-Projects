@@ -1,0 +1,273 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    04/02/2022  17:07:38  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+F:\EE337\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\end_q2 PRINT (.\Listings\end_q2.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  F:\EE337\C51\LIB\C51S.LIB (?C_STARTUP)
+  F:\EE337\C51\LIB\C51S.LIB (?C?CLDPTR)
+  F:\EE337\C51\LIB\C51S.LIB (?C?CSTPTR)
+  F:\EE337\C51\LIB\C51S.LIB (?C?CSTOPTR)
+  F:\EE337\C51\LIB\C51S.LIB (?C?UIDIV)
+  F:\EE337\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\end_q2 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0017H     UNIT         ?DT?MAIN
+                    001FH     0001H                  *** GAP ***
+            BIT     0020H.0   0000H.2   UNIT         ?BI?MAIN
+                    0020H.2   0000H.6                *** GAP ***
+            DATA    0021H     0005H     UNIT         ?DT?_INT_TO_STRING?MAIN
+            DATA    0026H     0005H     UNIT         ?DT?_INT_TO_STRING_2?MAIN
+            DATA    002BH     0003H     UNIT         _DATA_GROUP_
+            IDATA   002EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0020H                  *** GAP ***
+            CODE    0023H     0003H     ABSOLUTE     
+                    0026H     07DAH                  *** GAP ***
+            CODE    0800H     0147H     UNIT         ?CO?MAIN
+            CODE    0947H     00A6H     UNIT         ?PR?_INT_TO_STRING?MAIN
+            CODE    09EDH     00A2H     UNIT         ?C?LIB_CODE
+            CODE    0A8FH     0091H     UNIT         ?PR?MAIN?MAIN
+            CODE    0B20H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0BACH     003EH     UNIT         ?PR?_INT_TO_STRING_2?MAIN
+            CODE    0BEAH     0026H     UNIT         ?C_INITSEG
+            CODE    0C10H     0025H     UNIT         ?PR?_TRANSMIT_STRING?MAIN
+            CODE    0C35H     0010H     UNIT         ?PR?UART_INIT?MAIN
+            CODE    0C45H     0010H     UNIT         ?PR?SERIAL_ISR?MAIN
+            CODE    0C55H     000AH     UNIT         ?PR?RECEIVE_CHAR?MAIN
+            CODE    0C5FH     0008H     UNIT         ?PR?_TRANSMIT_CHAR?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\end_q2 (MAIN)
+
+
+SEGMENT                             DATA_GROUP 
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/02/2022  17:07:38  PAGE 2
+
+
+  +--> CALLED SEGMENT             START    LENGTH
+-------------------------------------------------
+?C_C51STARTUP                     -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                     -----    -----
+  +--> ?PR?UART_INIT?MAIN
+  +--> ?CO?MAIN
+  +--> ?PR?RECEIVE_CHAR?MAIN
+  +--> ?PR?_TRANSMIT_STRING?MAIN
+
+?PR?_TRANSMIT_STRING?MAIN         002BH    0003H
+  +--> ?PR?_TRANSMIT_CHAR?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\end_q2 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:0008H         PUBLIC        G_str
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  B:00A8H.7       PUBLIC        EA
+  C:0947H         PUBLIC        _int_to_string
+  D:00A8H         PUBLIC        IEN0
+  D:000EH         PUBLIC        S_str
+  D:00B8H         PUBLIC        IPL0
+  B:00A8H.4       PUBLIC        ES
+  B:0098H.0       PUBLIC        RI
+  B:0098H.1       PUBLIC        TI
+  C:0BACH         PUBLIC        _int_to_string_2
+  D:00D8H         PUBLIC        CCON
+  C:0A8FH         PUBLIC        main
+  B:0020H.0       PUBLIC        rx_complete
+  B:0020H.1       PUBLIC        tx_complete
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  D:008DH         PUBLIC        TH1
+  D:0014H         PUBLIC        n100_s
+  C:0C45H         PUBLIC        serial_ISR
+  C:0C35H         PUBLIC        uart_init
+  D:0017H         PUBLIC        n500_s
+  D:00F8H         PUBLIC        UEPINT
+  B:0088H.6       PUBLIC        TR1
+  D:00C8H         PUBLIC        T2CON
+  C:0C55H         PUBLIC        receive_char
+  C:0C10H         PUBLIC        _transmit_string
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/02/2022  17:07:38  PAGE 3
+
+
+  D:001AH         PUBLIC        password
+  C:0C5FH         PUBLIC        _transmit_char
+  -------         PROC          UART_INIT
+  C:0C35H         LINE#         23
+  C:0C35H         LINE#         24
+  C:0C35H         LINE#         25
+  C:0C38H         LINE#         26
+  C:0C3BH         LINE#         27
+  C:0C3EH         LINE#         28
+  C:0C40H         LINE#         29
+  C:0C42H         LINE#         30
+  C:0C44H         LINE#         31
+  -------         ENDPROC       UART_INIT
+  -------         PROC          _INT_TO_STRING
+  D:0021H         SYMBOL        val
+  D:0023H         SYMBOL        temp_str_data
+  C:0947H         LINE#         34
+  C:0951H         LINE#         35
+  C:0951H         LINE#         37
+  C:095EH         LINE#         38
+  C:0985H         LINE#         39
+  C:09ACH         LINE#         40
+  C:09D3H         LINE#         41
+  -------         ENDPROC       _INT_TO_STRING
+  -------         PROC          _INT_TO_STRING_2
+  D:0026H         SYMBOL        val
+  D:0028H         SYMBOL        temp_str_data
+  C:0BACH         LINE#         45
+  C:0BB6H         LINE#         46
+  C:0BB6H         LINE#         48
+  C:0BD0H         LINE#         49
+  -------         ENDPROC       _INT_TO_STRING_2
+  -------         PROC          _TRANSMIT_CHAR
+  D:0007H         SYMBOL        ch
+  C:0C5FH         LINE#         58
+  C:0C5FH         LINE#         59
+  C:0C5FH         LINE#         60
+  C:0C61H         LINE#         61
+  C:0C64H         LINE#         62
+  C:0C66H         LINE#         63
+  -------         ENDPROC       _TRANSMIT_CHAR
+  -------         PROC          _TRANSMIT_STRING
+  D:002BH         SYMBOL        s
+  C:0C10H         LINE#         70
+  C:0C16H         LINE#         71
+  C:0C16H         LINE#         72
+  C:0C21H         LINE#         73
+  C:0C21H         LINE#         74
+  C:0C32H         LINE#         75
+  C:0C34H         LINE#         76
+  -------         ENDPROC       _TRANSMIT_STRING
+  -------         PROC          RECEIVE_CHAR
+  -------         DO            
+  D:0007H         SYMBOL        ch
+  -------         ENDDO         
+  C:0C55H         LINE#         84
+  C:0C55H         LINE#         85
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/02/2022  17:07:38  PAGE 4
+
+
+  C:0C55H         LINE#         86
+  C:0C57H         LINE#         87
+  C:0C5AH         LINE#         88
+  C:0C5CH         LINE#         89
+  C:0C5EH         LINE#         90
+  C:0C5EH         LINE#         91
+  -------         ENDPROC       RECEIVE_CHAR
+  -------         PROC          SERIAL_ISR
+  C:0C45H         LINE#         102
+  C:0C45H         LINE#         104
+  C:0C48H         LINE#         105
+  C:0C48H         LINE#         106
+  C:0C4AH         LINE#         107
+  C:0C4CH         LINE#         108
+  C:0C4DH         LINE#         109
+  C:0C50H         LINE#         110
+  C:0C50H         LINE#         111
+  C:0C52H         LINE#         112
+  C:0C54H         LINE#         113
+  C:0C54H         LINE#         114
+  -------         ENDPROC       SERIAL_ISR
+  -------         PROC          MAIN
+  -------         DO            
+  D:0006H         SYMBOL        ch
+  -------         ENDDO         
+  C:0A8FH         LINE#         13
+  C:0A8FH         LINE#         14
+  C:0A8FH         LINE#         15
+  C:0A91H         LINE#         17
+  C:0A94H         LINE#         20
+  C:0A9CH         LINE#         22
+  C:0A9CH         LINE#         23
+  C:0A9CH         LINE#         24
+  C:0AA1H         LINE#         26
+  C:0ABFH         LINE#         27
+  C:0ABFH         LINE#         28
+  C:0AC5H         LINE#         29
+  C:0AC7H         LINE#         30
+  C:0ACDH         LINE#         31
+  C:0ACFH         LINE#         32
+  C:0AD5H         LINE#         33
+  C:0AD7H         LINE#         36
+  C:0AE0H         LINE#         37
+  C:0AE6H         LINE#         38
+  C:0AE8H         LINE#         39
+  C:0AF1H         LINE#         40
+  C:0AF7H         LINE#         41
+  C:0AF9H         LINE#         44
+  C:0AFFH         LINE#         45
+  C:0B01H         LINE#         46
+  C:0B07H         LINE#         47
+  C:0B09H         LINE#         51
+  C:0B12H         LINE#         52
+  C:0B14H         LINE#         57
+  C:0B1DH         LINE#         58
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  04/02/2022  17:07:38  PAGE 5
+
+
+
+  -------         MODULE        ?C?CLDPTR
+  C:09EDH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0A06H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?CSTOPTR
+  C:0A18H         PUBLIC        ?C?CSTOPTR
+  -------         ENDMOD        ?C?CSTOPTR
+
+  -------         MODULE        ?C?UIDIV
+  C:0A3AH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_INT_TO_STRING?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_INT_TO_STRING_2?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 033BH BYTE (40%) *
+******************************************************************************
+
+Program Size: data=45.2 xdata=0 code=1133
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
