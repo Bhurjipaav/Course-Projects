@@ -1,0 +1,69 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity alu_beh is
+    generic(
+        operand_width : integer:=4;
+        sel_line : integer:=2
+        );
+    port (
+        A: in std_logic_vector(operand_width-1 downto 0);
+        B: in std_logic_vector(operand_width-1 downto 0);
+        s: in std_logic_vector(sel_line-1 downto 0);
+        op: out std_logic_vector((operand_width*2)-1 downto 0)
+    ) ;
+end alu_beh;
+
+architecture a1 of alu_beh is
+    function add(A: in std_logic_vector(operand_width-1 downto 0); B: in std_logic_vector(operand_width-1 downto 0))
+        return std_logic_vector is
+            -- Declare "sum" and "carry" variable
+            -- you can use aggregate to initialize the variables & signals as shown below
+            --    variable variable_name : std_logic_vector(3 downto 0) := (others => '0');
+				variable sum,carry: std_logic_vector(3 downto 0);
+				variable i: integer;
+        begin
+            -- write logic for addition
+            -- Hint: Use for loop
+				for i in 0 to opernad width-1 loop
+					sum(i) := A(i) xor B(i) xor carry(i);
+					carry(i+1) := (carry(i) and (A(i) xor B(i))) or (A(i) and B(i));
+					end loop;
+            return sum;
+    end add;
+
+ 
+begin
+alu : process( A, B, s )
+begin
+   -- complete VHDL code for various outputs of ALU based on select lines
+   -- Hint: use if/else statement
+   --
+   -- add function usage :
+   --   signal_name <= add(A,B)
+   --   variable_name := add(A,B)
+   --
+   -- concatenate operator usage:
+   --    "0000"&A 
+			if < s(0) = "0" and s(1) = "0"> then
+				< variable i: integer;
+				for i in 0 to operand witdh-1 loop 
+				op(i) <= A(i)&B(i);end loop;>
+
+			elsif	< s(0) = "0" and s(1) = "1"> then
+				< op <= add(A,B);>
+				
+			elsif < s(0) = "1" and s(1) = "0"> then
+					< variable i: integer;
+				for i in 0 to operand witdh-1 loop 
+				op(i) <= A(i) xor B(i);end loop;>
+			
+			else < s(0) = "1" and s(1) = "1"> then
+				<  op <= "0010"*A;>
+				
+				end if;
+				
+			
+end process ; -- alu
+end a1 ; -- a1

@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus-lite-20.1.1.720-windows/alu/simulation/modelsim
+Ebeh_modelling
+Z1 w1632226558
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8D:/Quartus-lite-20.1.1.720-windows/alu/alu.vhd
+Z5 FD:/Quartus-lite-20.1.1.720-windows/alu/alu.vhd
+l0
+L4 1
+V2Rakh>Jh4gkGFZYhRFK^:2
+!s100 KJ4azh]?MiXTS<k`FeYDd2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1632226779
+!i10b 1
+Z8 !s108 1632226779.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Quartus-lite-20.1.1.720-windows/alu/alu.vhd|
+Z10 !s107 D:/Quartus-lite-20.1.1.720-windows/alu/alu.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aa1
+R2
+R3
+DEx4 work 13 beh_modelling 0 22 2Rakh>Jh4gkGFZYhRFK^:2
+!i122 1
+l35
+L17 43
+VU6B:eL_gFl8>o^@37m^KN1
+!s100 a?0H6M3dFT2]NPdQ_6?D>3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1632226495
+R2
+R3
+!i122 0
+R0
+Z14 8D:/Quartus-lite-20.1.1.720-windows/alu/DUT.vhd
+Z15 FD:/Quartus-lite-20.1.1.720-windows/alu/DUT.vhd
+l0
+L6 1
+VOkTZn]z[di;9YQ>j?9l`c3
+!s100 5D]?c1JdY5;9=AEGW8B4h3
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|D:/Quartus-lite-20.1.1.720-windows/alu/DUT.vhd|
+Z17 !s107 D:/Quartus-lite-20.1.1.720-windows/alu/DUT.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 OkTZn]z[di;9YQ>j?9l`c3
+!i122 0
+l16
+L11 22
+Vo[XFXV_1PPgZEfXF1_O5<3
+!s100 8Vl^bzSD0VId8c7D2N3KA3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Etestbench
+Z18 w1632222551
+R3
+R2
+!i122 2
+R0
+Z19 8D:/Quartus-lite-20.1.1.720-windows/alu/Testbench.vhd
+Z20 FD:/Quartus-lite-20.1.1.720-windows/alu/Testbench.vhd
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|D:/Quartus-lite-20.1.1.720-windows/alu/Testbench.vhd|
+!s107 D:/Quartus-lite-20.1.1.720-windows/alu/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 2
+l69
+L9 132
+Vh8cR6[iD8=HgC8H<no8U?1
+!s100 Pz=f]dPJP283@7I_>:G1Q3
+R6
+31
+R7
+!i10b 1
+R8
+R21
+Z22 !s107 D:/Quartus-lite-20.1.1.720-windows/alu/Testbench.vhd|
+!i113 1
+R11
+R12
