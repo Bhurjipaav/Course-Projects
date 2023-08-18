@@ -1,0 +1,28 @@
+|DUT
+input_vector[0] => detector:add_instance.x[0]
+input_vector[1] => detector:add_instance.x[1]
+input_vector[2] => detector:add_instance.x[2]
+input_vector[3] => detector:add_instance.x[3]
+output_vector[0] << detector:add_instance.y[0]
+
+
+|DUT|detector:add_instance
+x[0] => Equal0.IN3
+x[0] => Equal1.IN2
+x[0] => Equal2.IN2
+x[0] => Equal3.IN0
+x[1] => Equal0.IN2
+x[1] => Equal1.IN1
+x[1] => Equal2.IN1
+x[1] => Equal3.IN3
+x[2] => Equal0.IN1
+x[2] => Equal1.IN3
+x[2] => Equal2.IN0
+x[2] => Equal3.IN2
+x[3] => Equal0.IN0
+x[3] => Equal1.IN0
+x[3] => Equal2.IN3
+x[3] => Equal3.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
